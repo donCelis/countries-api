@@ -1,0 +1,19 @@
+.card img {
+  height: 12.5rem;
+  object-fit: cover;
+}
+.card .card-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow-y: hidden;
+}
+.card .card-text{
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 576px) {
+  .card img {
+    height: 16rem;
+  }
+}

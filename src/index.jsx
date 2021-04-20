@@ -5,6 +5,8 @@ import reportWebVitals from "./reportWebVitals";
 import { ProviderContries } from "./context";
 import Routes from "./routes";
 
+import "./styles/main.css";
+
 ReactDOM.render(
   <React.StrictMode>
     <ProviderContries>

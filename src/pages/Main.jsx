@@ -7,12 +7,16 @@ const Main = () => {
   const { countries, setContries } = useContext(ContextContries);
   useEffect(() => {
     const getData = async () => {
-      const request = await getcountries();
-      setContries(request);
+      const response = await getcountries();
+      setContries(response);
     };
     getData();
-  }, [setContries]);
+  }, []);
 
-  return countries.lenght === 0 ? "Loading" : <Countries />;
+  return countries.length === 0 ? (
+    <div className="text-center text-light">Loading...</div>
+  ) : (
+    <Countries />
+  );
 };
 export default Main;

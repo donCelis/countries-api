@@ -9,7 +9,7 @@ const Routes = () => {
     <Router>
       <Switch>
         <Route path="/" exact component={Main} />
-        <Route path="/country" exact component={Country} />
+        <Route path="/country/:name" exact component={Country} />
         <Route component={Error404} />
       </Switch>
     </Router>

@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 import "../styles/country.css";
 
 const Card = ({ name, flag, population, region, capital }) => {
   population = new Intl.NumberFormat("de-DE").format(Number(population));
   return (
-    <div className="card">
-      <img src={flag} className="card-img-top" alt={name} />
+    <Link className="card" to={`/country/${name}`}>
+      <img loading="lazy" src={flag} className="card-img-top" alt={name} />
       <div className="card-body">
-        <h4 className="card-title mb-3">{name}</h4>
+        <h4 className="card-title mt-1 mb-3">{name}</h4>
         <p className="card-text">
           <strong>Population: </strong>
           {population}
@@ -20,7 +21,7 @@ const Card = ({ name, flag, population, region, capital }) => {
           {capital}
         </p>
       </div>
-    </div>
+    </Link>
   );
 };
 export default Card;

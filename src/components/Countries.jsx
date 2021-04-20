@@ -5,7 +5,7 @@ import Card from "./Card";
 const Countries = () => {
   const { countries } = useContext(ContextContries);
   return (
-    <section className="py-5">
+    <section className="py-5 countries">
       <div className="container">
         <div className="row">
           {countries.map((element, id) => (

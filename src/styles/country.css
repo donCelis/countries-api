@@ -1,3 +1,14 @@
+.card{
+  background: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+.card:hover{
+  color: hsl(0, 0%, 100%);
+}
+.card:visited{
+  color: hsl(0, 0%, 100%);
+}
 .card img {
   height: 12.5rem;
   object-fit: cover;
@@ -7,9 +18,14 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   overflow-y: hidden;
+  letter-spacing: 1px;
 }
 .card .card-text{
   margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+.card .card-text strong{
+  font-weight: 600;
 }
 
 @media screen and (max-width: 576px) {

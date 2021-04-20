@@ -1,5 +1,11 @@
 const Error404 = () => {
-  return <p>No encontrado</p>;
+  return (
+    <section>
+      <div className="container">
+        <p className="text-center">No encontrado</p>
+      </div>
+    </section>
+  );
 };
 
 export default Error404;

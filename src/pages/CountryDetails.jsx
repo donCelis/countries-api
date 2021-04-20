@@ -1,10 +1,11 @@
 import { getcountry } from "../API";
-import { useParams, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { countryFadeIn, move } from "../animations";
 
-const Country = () => {
+const CountryDetails = () => {
   const { name } = useParams();
   const [country, setCountry] = useState({});
 
@@ -14,15 +15,30 @@ const Country = () => {
       setCountry(response[0]);
     };
     getData();
-  }, []);
+  }, [name]);
+
+  const {
+    flag,
+    nativeName,
+    population,
+    region,
+    subregion,
+    capital,
+    topLevelDomain,
+    currencies,
+    languages,
+    borders,
+  } = country;
 
   return (
     <section>
       {Object.entries(country).length === 0 ? (
-        <div className="text-center text-light">Loading...</div>
+        <div className="text-center loading">Loading...</div>
       ) : (
         <div className="container">
-          <Link to={"/"}>Back</Link>
+          <Link to={"/"} aria-label="previous page">
+            Back
+          </Link>
           <motion.div
             className="row"
             variants={countryFadeIn}
@@ -30,18 +46,19 @@ const Country = () => {
             animate="visible"
           >
             <motion.div className="col-6" variants={move}>
-              <div>
+              <picture>
                 <img
                   className="img-fluid"
-                  src={country.flag}
-                  alt={country.name}
+                  src={flag}
+                  alt={name}
                 />
-              </div>
+              </picture>
             </motion.div>
             <motion.div className="col-6" variants={move}>
-              <div>
-                <h1 className="text-light">{country.name}</h1>
-              </div>
+              <article>
+                <h1>{name}</h1>
+                <p>{nativeName}</p>
+              </article>
             </motion.div>
           </motion.div>
         </div>
@@ -50,4 +67,4 @@ const Country = () => {
   );
 };
 
-export default Country;
+export default CountryDetails;

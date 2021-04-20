@@ -5,22 +5,21 @@ export const countryFadeIn = {
   visible: {
     opacity: 1,
     transition: {
-      duration: .5,
+      duration: 0.5,
       type: "spring",
-      staggerChildren: .5,
+      staggerChildren: 0.5,
     },
   },
 };
 
-
 export const move = {
-  hidden:{
-    y: -200
+  hidden: {
+    y: -200,
   },
-  visible:{
+  visible: {
     y: 0,
-    transition:{
+    transition: {
       duration: 0.5,
-    }
-  }
-}
+    },
+  },
+};

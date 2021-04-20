@@ -1,16 +1,16 @@
 import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
 
-import Main from "../pages/Main";
-import Country from "../pages/Country";
+import Home from "../pages/Home";
+import CountryDetails from "../pages/CountryDetails";
 import Error404 from "../pages/Error404";
 
 const Routes = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/" exact component={Main} />
-        <Route path="/country/:name" exact component={Country} />
-        <Route component={Error404} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/country/:name" component={CountryDetails} />
+        <Route exact path="*" component={Error404} />
       </Switch>
     </Router>
   );

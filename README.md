@@ -7,8 +7,8 @@ Challenge Frontend Mentor resolved
 ## Installation
 
 ```
-git clone git@github.com:donCelis/countriesApp.git
-cd countriesApp
+git clone git@github.com:donCelis/countries-api.git
+cd countries-api
 npm i
 ```
 

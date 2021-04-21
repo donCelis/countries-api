@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../styles/country.css";
 
-const Card = ({ name, flag, population, region, capital }) => {
+const Country = ({ name, flag, population, region, capital }) => {
   population = new Intl.NumberFormat("de-DE").format(Number(population));
   return (
     <Link className="card" to={`/country/${name}`} aria-label={name}>
@@ -24,4 +24,4 @@ const Card = ({ name, flag, population, region, capital }) => {
     </Link>
   );
 };
-export default Card;
+export default Country;

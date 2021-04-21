@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { ContextContries } from "../context";
-import Card from "./Card";
+import Country from "./Country";
 
-const Countries = () => {
+const CountriesList = () => {
   const { countries } = useContext(ContextContries);
   return (
     <section className="py-5 countries">
@@ -13,7 +13,7 @@ const Countries = () => {
               key={id}
               className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4"
             >
-              <Card {...element} />
+              <Country {...element} />
             </div>
           ))}
         </div>
@@ -22,4 +22,4 @@ const Countries = () => {
   );
 };
 
-export default Countries;
+export default CountriesList;

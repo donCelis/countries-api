@@ -14,12 +14,15 @@ export const countryFadeIn = {
 
 export const move = {
   hidden: {
-    y: -200,
+    opacity: 0,
+    /* y: `${-200}%`, */
   },
   visible: {
-    y: 0,
+    opacity: 1,
+    /* y: 0, */
     transition: {
-      duration: 0.5,
+      duration: 0.8,
+      type: "spring",
     },
   },
 };

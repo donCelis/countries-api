@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { countryFadeIn, move } from "../animations";
 
+import "../styles/countryDetails.css"
+
 const CountryDetails = () => {
   const { name } = useParams();
   const [country, setCountry] = useState({});
@@ -61,32 +63,40 @@ const CountryDetails = () => {
                   <div className="col-6">
                     <div>
                       <p>
-                        <strong>native name: </strong> {nativeName}
+                        <strong>native name: </strong>
+                        {nativeName}
                       </p>
                       <p>
-                        <strong>population: </strong> {population}
+                        <strong>population: </strong>
+                        {population.toLocaleString("de-DE")}
                       </p>
                       <p>
-                        <strong>region: </strong> {region}
+                        <strong>region: </strong>
+                        {region}
                       </p>
                       <p>
-                        <strong>subregion: </strong> {subregion}
+                        <strong>subregion: </strong>
+                        {subregion}
                       </p>
                       <p>
-                        <strong>capital: </strong> {capital}
+                        <strong>capital: </strong>
+                        {capital}
                       </p>
                     </div>
                   </div>
                   <div className="col-6">
                     <div>
                       <p>
-                        <strong>top level domain: </strong> {topLevelDomain}
+                        <strong>top level domain: </strong>
+                        {topLevelDomain}
                       </p>
                       <p>
-                        <strong>currencies: </strong> {currencies[0].code}
+                        <strong>currencies: </strong>
+                        {currencies[0].code}
                       </p>
                       <p>
-                        <strong>currencies: </strong> {languages[0].name}
+                        <strong>currencies: </strong>
+                        {languages[0].name}
                       </p>
                     </div>
                   </div>

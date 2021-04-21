@@ -1,6 +1,7 @@
 import { useEffect, useContext } from "react";
 import { getcountries } from "../API";
 import { ContextContries } from "../context";
+import Header from "../components/Header";
 import CountriesList from "../components/CountriesList";
 
 const Home = () => {
@@ -18,7 +19,10 @@ const Home = () => {
       <div className="text-center loading">Loading...</div>
     </section>
   ) : (
-    <CountriesList />
+    <>
+      <Header />
+      <CountriesList />
+    </>
   );
 };
 export default Home;

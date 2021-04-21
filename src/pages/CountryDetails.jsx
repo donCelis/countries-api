@@ -31,7 +31,7 @@ const CountryDetails = () => {
   } = country;
 
   return (
-    <section className="country-details">
+    <section className="country-details py-5">
       {Object.entries(country).length === 0 ? (
         <div className="text-center loading">Loading...</div>
       ) : (

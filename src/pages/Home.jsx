@@ -14,7 +14,9 @@ const Home = () => {
   }, []);
 
   return countries.length === 0 ? (
-    <div className="text-center loading">Loading...</div>
+    <section className="py-5">
+      <div className="text-center loading">Loading...</div>
+    </section>
   ) : (
     <CountriesList />
   );

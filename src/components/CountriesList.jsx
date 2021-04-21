@@ -6,7 +6,7 @@ const CountriesList = () => {
   const { countries } = useContext(ContextContries);
 
   return (
-    <section className="py-5 countries">
+    <section className="countries py-5">
       <div className="container">
         <div className="row gx-md-5 gy-5">
           {countries.map((element, id) => (

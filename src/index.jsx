@@ -2,16 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
 
-import { ProviderContries } from "./context";
-import Routes from "./routes";
+import { AppProvider } from "./context";
+import App from "./routes";
 
 import "./styles/main.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ProviderContries>
-      <Routes />
-    </ProviderContries>
+    <AppProvider>
+      <App />
+    </AppProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

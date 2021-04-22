@@ -1,18 +1,24 @@
 import { createContext, useState } from "react";
 
-export const ContextContries = createContext({});
+const AppContext = createContext({});
 
-export const ProviderContries = ({ children }) => {
+const AppProvider = ({ children }) => {
   const [countries, setContries] = useState([]);
+
+  const [filtered, setFiltered] = useState([]);
 
   const globalState = {
     countries,
     setContries,
+    filtered,
+    setFiltered,
   };
 
   return (
-    <ContextContries.Provider value={globalState}>
+    <AppContext.Provider value={globalState}>
       {children}
-    </ContextContries.Provider>
+    </AppContext.Provider>
   );
 };
+
+export { AppContext, AppProvider };

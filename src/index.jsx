@@ -1,16 +1,21 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
+import "./styles/main.css";
 
 import { AppProvider } from "./context";
-import App from "./routes";
+//import App from "./routes";
 
-import "./styles/main.css";
+const App = lazy(() => import("./routes"));
+const Loading = () => <p>Loading...</p>;
+
 
 ReactDOM.render(
   <React.StrictMode>
     <AppProvider>
-      <App />
+      <Suspense fallback={Loading}>
+        <App />
+      </Suspense>
     </AppProvider>
   </React.StrictMode>,
   document.getElementById("root")

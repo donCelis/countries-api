@@ -4,9 +4,8 @@ import { AppContext } from "../context";
 import Country from "./Country";
 
 const CountriesList = () => {
-  const { countries, setContries, filtered, setFiltered } = useContext(
-    AppContext
-  );
+  const { countries, setContries, filtered, setFiltered } =
+    useContext(AppContext);
   useEffect(() => {
     const getData = async () => {
       const response = await getcountries();

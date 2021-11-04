@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router";
 import { getcountry } from "../API";
-import { motion } from "framer-motion";
-import { fadeIn } from "../animations";
 
 import "../styles/countryDetails.css";
 
@@ -20,7 +18,7 @@ const CountryDetails = () => {
   }, [name]);
 
   const {
-    flag,
+    flags,
     nativeName,
     population,
     region,
@@ -36,12 +34,7 @@ const CountryDetails = () => {
     <div className="text-center loading py-5">Loading...</div>
   ) : (
     <section className="country-details">
-      <motion.div
-        variants={fadeIn}
-        initial="hidden"
-        animate="visible"
-        className="container"
-      >
+      <div className="container">
         <div className="row">
           <div className="my-5">
             <Link className="btn-back" to={"/"} aria-label="previous page">
@@ -52,7 +45,7 @@ const CountryDetails = () => {
         <div className="row gx-md-5 gy-5 gy-lg-0 align-items-center">
           <div className="col-12 col-sm-12 col-md-12 col-lg-6">
             <div>
-              <img className="flag img-fluid" src={flag} alt={name} />
+              <img className="flag img-fluid" src={flags.svg} alt={name} />
             </div>
           </div>
           <div className="col-12 col-sm-12 col-md-12 col-lg-6">
@@ -117,7 +110,7 @@ const CountryDetails = () => {
             </article>
           </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };

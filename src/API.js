@@ -1,15 +1,15 @@
-const URL = "https://restcountries.eu/rest/v2";
+const URL = "https://restcountries.com/v3.1/all";
 
 const getcountries = async () => {
-  const data = await fetch(`${URL}/all`);
-  const response = data.json();
-  return response;
+  const req = await fetch(`${URL}`);
+  const res = req.json();
+  return res;
 };
 
 const getcountry = async (name) => {
-  const data = await fetch(`${URL}/name/${name}?fullText=true`);
-  const response = data.json();
-  return response;
+  const req = await fetch(`${URL}/name/${name}?fullText=true`);
+  const res = req.json();
+  return res;
 };
 
 export { getcountries, getcountry };

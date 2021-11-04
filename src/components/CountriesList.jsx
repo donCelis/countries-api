@@ -9,6 +9,7 @@ const CountriesList = () => {
   useEffect(() => {
     const getData = async () => {
       const response = await getcountries();
+      //console.log(response)
       setContries(response);
       setFiltered(response);
     };

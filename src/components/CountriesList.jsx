@@ -27,12 +27,12 @@ const CountriesList = () => {
       <div className="container">
         <div className="row gx-md-5 gy-5">
           {filtered.map((element, id) => (
-            <div
+            <article
               key={id}
               className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3"
             >
               <Country {...element} />
-            </div>
+            </article>
           ))}
         </div>
       </div>

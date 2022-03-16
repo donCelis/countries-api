@@ -1,5 +1,5 @@
-import Form from "../components/Form";
-import CountriesList from "../components/CountriesList";
+import Form from '../components/Form'
+import CountriesList from '../components/CountriesList'
 
 const Home = () => {
   return (
@@ -7,6 +7,6 @@ const Home = () => {
       <Form />
       <CountriesList />
     </>
-  );
-};
-export default Home;
+  )
+}
+export default Home

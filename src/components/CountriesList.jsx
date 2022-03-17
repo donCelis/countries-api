@@ -1,4 +1,4 @@
-import { useEffect, useContext } from 'react'
+import { useEffect } from 'react'
 import { getcountries } from '../API'
 import { useGoblalContext } from '../context'
 import Country from './Country'

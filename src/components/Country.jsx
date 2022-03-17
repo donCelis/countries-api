@@ -5,8 +5,8 @@ const Country = ({ name, flags, population, region, capital }) => {
   return (
     <Link
       className='card'
-      to={`/country/${name.official}`}
-      aria-label={name.official}
+      to={`/country/${name.common}`}
+      aria-label={name.common}
     >
       <img
         loading='lazy'
@@ -15,7 +15,7 @@ const Country = ({ name, flags, population, region, capital }) => {
         alt={name.official}
       />
       <div className='card-body'>
-        <h4 className='card-title mt-1 mb-3'>{name.official}</h4>
+        <h4 className='card-title mt-1 mb-3'>{name.common}</h4>
         <p className='card-text'>
           <strong>Population: </strong>
           {population.toLocaleString('de-DE')}

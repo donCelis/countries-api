@@ -7,7 +7,7 @@ import Error404 from '../pages/Error404'
 
 const App = () => {
   return (
-    <Router>
+    <Router basename='countries-api'>
       <Header />
       <Switch>
         <Route exact path='/' component={Home} />

@@ -6,9 +6,9 @@ const Form = () => {
 
   const onFiltered = (e) => {
     e.preventDefault()
-    const request = e.target.country.value
+    const query = e.target.country.value
     const responseFilter = countries.filter((element) =>
-      element.name.toLowerCase().match(request.toLowerCase())
+      element.name.toLowerCase().match(query.toLowerCase())
     )
     setFiltered(responseFilter)
     e.target.reset()
